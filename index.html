@@ -239,39 +239,104 @@
 
         /* GALLERY */
 
-        .gallery {
-            background: #09251d;
-        }
+.gallery {
+    padding: 70px 20px;
+    background: #f5f7f8;
+}
 
-        .gallery-grid {
-            max-width: 1000px;
-            margin: 35px auto 0;
+.gallery .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+.gallery .section-title p {
+    color: #008f5a;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-        .gallery-box {
-            min-height: 180px;
+.gallery .section-title h2 {
+    font-size: 36px;
+    margin: 8px 0;
+    color: #111;
+}
 
-            background: #0d3328;
+.gallery .section-title span {
+    color: #666;
+}
 
-            border: 1px dashed #d4af37;
-            border-radius: 10px;
+.gallery-grid {
+    max-width: 1100px;
+    margin: auto;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
-            text-align: center;
-            padding: 20px;
-        }
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
 
-        .gallery-box h3 {
-            color: #d4af37;
-        }
+    border-radius: 18px;
+    background: #ddd;
 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 35px 18px 18px;
+
+    color: white;
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.85)
+    );
+}
+
+.gallery-overlay h3 {
+    margin: 0 0 5px;
+    font-size: 19px;
+}
+
+.gallery-overlay p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .gallery {
+        padding: 55px 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 240px;
+    }
+
+    .gallery .section-title h2 {
+        font-size: 30px;
+    }
+}
         /* CONTACT */
 
         .contact {
@@ -718,60 +783,46 @@
 </section>
 
 
-    <!-- GALLERY -->
-
+    <!<!-- GALLERY -->
 <section class="gallery" id="gallery">
 
-    <h2 class="section-title">
-        OUR WORK GALLERY
-    </h2>
-
-    <p class="section-text">
-        A selection of our phone repair, software,
-        flashing and technical work.
-    </p>
+    <div class="section-title">
+        <p>OUR WORK</p>
+        <h2>Gallery</h2>
+        <span>Professional Phone Repair & Software Services</span>
+    </div>
 
     <div class="gallery-grid">
 
-        <div class="gallery-box">
-            <div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=900&q=80" alt="Phone Repair">
+            <div class="gallery-overlay">
                 <h3>📱 Phone Repair</h3>
-                <p>Mobile phone repair and troubleshooting.</p>
+                <p>Professional smartphone repair</p>
             </div>
         </div>
 
-        <div class="gallery-box">
-            <div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="Software Services">
+            <div class="gallery-overlay">
                 <h3>💻 Software Services</h3>
-                <p>Software installation and system services.</p>
+                <p>Professional software solutions</p>
             </div>
         </div>
 
-        <div class="gallery-box">
-            <div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=900&q=80" alt="Firmware Flashing">
+            <div class="gallery-overlay">
                 <h3>⚡ Firmware Flashing</h3>
-                <p>Firmware flashing and software recovery.</p>
+                <p>Firmware & system services</p>
             </div>
         </div>
 
-        <div class="gallery-box">
-            <div>
-                <h3>🔑 Tool Activation</h3>
-                <p>Tool activation and server services.</p>
-            </div>
-        </div>
-
-        <div class="gallery-box">
-            <div>
-                <h3>⏱️ Tool Rental</h3>
-                <p>Temporary access to supported tools.</p>
-            </div>
-        </div>
-
-        <div class="gallery-box">
-            <div>
-                <h3>🛡️ Tool Security</h3>
-                <p>Anti-crack and tool security services.</p>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=900&q=80" alt="Smartphone Solutions">
+            <div class="gallery-overlay">
+                <h3>🔧 Smartphone Solutions</h3>
+                <p>Complete mobile solutions</p>
             </div>
         </div>
 
